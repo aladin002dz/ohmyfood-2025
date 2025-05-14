@@ -1,0 +1,94 @@
+.functioning {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .steps-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            gap: 25px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            gap: 30px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            background-color: $color-bg;
+            width: 100%;
+            max-width: 400px;
+
+            @media screen and (min-width: $breakpoint-md) {
+                width: calc(50% - 20px);
+                max-width: 400px;
+            }
+
+            @media screen and (min-width: $breakpoint-lg) {
+                width: calc(33.33% - 20px);
+                max-width: 400px;
+            }
+
+            padding: 30px 25px;
+            border-radius: 20px;
+            position: relative;
+            @include box-shadow($shadow-step);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #F5EDFF;
+
+                img {
+                    filter: brightness(0) saturate(100%) invert(35%) sepia(85%) saturate(1449%) hue-rotate(248deg) brightness(87%) contrast(97%);
+                }
+            }
+
+            .step-number {
+                position: absolute;
+                left: -12px;
+                width: 24px;
+                height: 24px;
+                background-color: $color-primary;
+                border-radius: 50%;
+                @include flex-center;
+
+                span {
+                    color: $color-white;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 25px;
+                filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%) hue-rotate(227deg) brightness(95%) contrast(83%);
+                transition: filter 0.3s ease;
+            }
+
+            &:nth-child(3) img {
+                filter: brightness(0) saturate(100%) invert(35%) sepia(85%) saturate(1449%) hue-rotate(248deg) brightness(87%) contrast(97%);
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}
