@@ -2,6 +2,10 @@
 
 A mobile-first responsive website for a fictional restaurant booking service called "Ohmyfood". This project is built using HTML5 and SASS/CSS3 with a focus on responsive design and animations.
 
+## Live Demo
+
+[Ohmyfood](https://aladin002dz.github.io/ohmyfood-2025/)
+
 ## Features
 
 - Mobile-first responsive design
