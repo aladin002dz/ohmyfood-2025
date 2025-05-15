@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+.header {
+    &__logo {
+        text-align: center;
+        padding: 14px 0;
+        box-shadow: $shadow-light;
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: auto;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: $font-title;
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+
+    &__location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        background-color: $grey-medium;
+        padding: 15px 0;
+        box-shadow: $shadow-medium inset;
+
+        &-icon {
+            color: $grey-dark;
+            width: 12px;
+            height: 16px;
+        }
+
+        &-text {
+            font-weight: 500;
+            font-size: 16px;
+            color: $grey-dark;
+        }
+    }
+}

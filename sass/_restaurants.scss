@@ -1,0 +1,108 @@
+@use 'variables' as *;
+
+.restaurants {
+    padding: 50px 20px;
+    background-color: $grey-light;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-m;
+        max-width: 100%;
+
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $spacing-m;
+        }
+    }
+
+    &__card {
+        background-color: $white;
+        border-radius: $border-radius-s;
+        overflow: hidden;
+        box-shadow: $shadow-dark;
+        position: relative;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: $shadow-medium;
+        }
+
+        &-image {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &-badge {
+            position: absolute;
+            top: 13px;
+            right: 12px;
+            background-color: $tertiary-color;
+            color: $tertiary-dark;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 7px 12px;
+            border-radius: $border-radius-badge;
+        }
+
+        &-content {
+            padding: 15px;
+            position: relative;
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        &-location {
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+        &-heart {
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
+            font-size: 22px;
+            cursor: pointer;
+
+            &-empty {
+                display: block;
+                transition: opacity 0.2s;
+            }
+
+            &-filled {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background: $gradient-primary;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                transition: opacity 0.4s;
+            }
+
+            &:hover {
+                .restaurants__card-heart-empty {
+                    opacity: 0;
+                }
+
+                .restaurants__card-heart-filled {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

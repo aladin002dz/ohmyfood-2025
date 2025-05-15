@@ -1,0 +1,41 @@
+// Colors
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$tertiary-dark: #008766;
+
+// Gradient
+$gradient-primary: linear-gradient(to bottom right, $secondary-color, $primary-color);
+
+// Background colors
+$grey-light: #F6F6F6;
+$grey-medium: #EAEAEA;
+$grey-dark: #353535;
+$white: #FFFFFF;
+$black: #000000;
+$icon-grey: #7E7E7E;
+
+// Font families
+$font-primary: 'Roboto', sans-serif;
+$font-title: 'Shrikhand', cursive;
+
+// Spacing
+$spacing-xs: 7px;
+$spacing-s: 15px;
+$spacing-m: 18px;
+$spacing-l: 25px;
+
+// Borders
+$border-radius-s: 15px;
+$border-radius-m: 20px;
+$border-radius-l: 25px;
+$border-radius-badge: 2px;
+
+// Box shadows
+$shadow-light: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+$shadow-medium: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$shadow-dark: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+// Breakpoints
+$tablet: 768px;
+$desktop: 1024px;

@@ -1,38 +1,73 @@
-# ohmyfood
+# Ohmyfood - Restaurant Website
 
-This is a responsive web implementation of the ohmyfood Figma design. The project is a web page for a restaurant food ordering service that adapts to different screen sizes.
+A mobile-first responsive website for a fictional restaurant booking service called "Ohmyfood". This project is built using HTML5 and SASS/CSS3 with a focus on responsive design and animations.
 
 ## Features
 
-- Mobile-first design
-- Fully responsive layout (mobile, tablet, desktop)
-- Interactive elements with hover effects
-- Clean, modern UI following the Figma design
-- Grid layout for cards on larger screens
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- Responsive design with media queries
-- Google Fonts (Roboto, Shrikhand)
+- Mobile-first responsive design
+- CSS animations using SASS
+- BEM methodology for CSS class naming
+- Pure CSS heart animation for favorites
 
 ## Project Structure
 
-- `index.html` - Main HTML file
-- `styles.css` - CSS styles with responsive media queries
-- `images/` - Directory containing all images and icons
+```
+sass-tutorial/
+├── css/
+│   └── style.css
+├── images/
+│   └── (SVG and image files)
+├── sass/
+│   ├── _variables.scss
+│   ├── _reset.scss
+│   ├── _header.scss
+│   ├── _hero.scss
+│   ├── _functioning.scss
+│   ├── _restaurants.scss
+│   ├── _footer.scss
+│   └── main.scss
+├── index.html
+└── README.md
+```
 
-## Responsive Breakpoints
+## Getting Started
 
-- Mobile: Default layout (up to 767px)
-- Tablet: 768px - 1023px
-- Desktop: 1024px and above
+### Prerequisites
 
-## How to View
+- Node.js
+- npm
 
-Open the `index.html` file in any modern web browser to view the website. Resize your browser window to see how the layout adapts to different screen sizes.
+### Installation
 
-## Design Credits
+1. Clone the repository
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-Design from Figma: [Maquettes Ohmyfood (mobile et desktop)](https://www.figma.com/design/t4449fzDnwGYmzuwQdu87V)
+### Development
+
+To work on the project with live SASS compilation:
+
+```
+npm run dev
+```
+
+### Build
+
+To build the project for production:
+
+```
+npm run build
+```
+
+## Design Methodologies
+
+- BEM (Block, Element, Modifier) methodology for CSS naming convention
+- 7-1 pattern for SASS architecture (simplified)
+- Mobile-first approach
+
+## Resources
+
+- [Sass Documentation](https://sass-lang.com/documentation)
+- [BEM Methodology](https://getbem.com/)

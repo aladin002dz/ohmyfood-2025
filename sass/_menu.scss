@@ -1,0 +1,185 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+.menu {
+    &__header {
+        position: relative;
+
+        &-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-top: -40px;
+        border-radius: 40px 40px 0 0;
+        background-color: $grey-light;
+        padding: 30px 20px 40px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        h1 {
+            font-family: $font-title;
+            font-size: 28px;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+
+    &__section {
+        margin-bottom: 40px;
+
+        &-title {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 5px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 40px;
+                height: 3px;
+                background-color: $tertiary-color;
+            }
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &__item {
+        background-color: $white;
+        border-radius: 15px;
+        box-shadow: $shadow-dark;
+        overflow: hidden;
+        display: flex;
+        height: 69px;
+        position: relative;
+        cursor: pointer;
+        animation: appear 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.1 + 0.1}s;
+            }
+        }
+
+        &-content {
+            flex: 1;
+            padding: 15px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        &-info {
+            flex: 1;
+            min-width: 0;
+            transition: width 0.3s ease;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 0 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-description {
+            font-weight: 300;
+            font-size: 15px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-price {
+            font-weight: 700;
+            font-size: 15px;
+            margin-left: 5px;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            color: $grey-dark;
+        }
+
+        &-select {
+            background-color: $tertiary-color;
+            width: 60px;
+            position: absolute;
+            right: -60px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 15px 15px 0;
+            transition: right 0.3s ease;
+
+            svg {
+                color: $white;
+                font-size: 20px;
+                transform: rotate(0);
+                transition: transform 0.5s ease;
+            }
+        }
+
+        &:hover {
+            .menu__item-select {
+                right: 0;
+            }
+
+            .menu__item-info {
+                width: calc(100% - 60px);
+            }
+
+            .menu__item-select svg {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &__order {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        button {
+            background: $gradient-primary;
+            color: $white;
+            padding: 15px 50px;
+            border-radius: $border-radius-l;
+            font-weight: 500;
+            font-size: 16px;
+            box-shadow: $shadow-dark;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                opacity: 0.9;
+                box-shadow: $shadow-medium;
+            }
+        }
+    }
+}

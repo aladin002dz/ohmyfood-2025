@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+.footer {
+    background-color: $grey-dark;
+    color: $white;
+    padding: 22px $spacing-l;
+
+    &__logo {
+        font-family: $font-title;
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        &-icon {
+            width: 13px;
+            height: 13px;
+        }
+
+        &-text {
+            font-size: 16px;
+
+            &--bold {
+                font-weight: 500;
+            }
+
+            &--regular {
+                font-weight: 400;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+        padding: 30px 25px;
+
+        &__logo {
+            margin-bottom: 0;
+        }
+
+        &__links {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}
