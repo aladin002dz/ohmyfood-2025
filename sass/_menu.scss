@@ -76,9 +76,9 @@
         opacity: 0;
         transform: translateY(20px);
 
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
-                animation-delay: #{$i * 0.1 + 0.1}s;
+                animation-delay: #{$i * 0.3 + 0.1}s;
             }
         }
 

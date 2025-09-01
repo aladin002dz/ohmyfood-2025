@@ -387,13 +387,16 @@ img {
   transform: translateY(20px);
 }
 .menu__item:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
 }
 .menu__item:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 0.7s;
 }
 .menu__item:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: 1s;
+}
+.menu__item:nth-child(4) {
+  animation-delay: 1.3s;
 }
 .menu__item-content {
   flex: 1;
